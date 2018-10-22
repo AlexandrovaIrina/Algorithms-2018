@@ -29,7 +29,6 @@ class TaskTestsKotlin : AbstractTaskTests() {
     fun testSortSequence() {
         sortSequence { inputName, outputName -> sortSequence(inputName, outputName) }
     }
-
     @Test
     @Tag("Easy")
     fun testMergeArrays() {
