@@ -173,16 +173,16 @@ fun <T : Comparable<T>> mergeArrays(first: Array<T>, second: Array<T?>) {
     var firstIt = 0
     var secondIt = first.size
     var current = 0
-    while (firstIt < first.size && second < second.size) {
-        if (fisrt[firstIt] <= second[secondIt]) {
-            second[current] = fisrt[firstIt]
+    while (firstIt < first.size && secondIt < second.size) {
+        if (first[firstIt] <= second[secondIt]!!) {
+            second[current] = first[firstIt]
             firstIt ++
         }
         else {
             second[current] = second[secondIt]
             secondIt ++
         }
-        curent ++
+        current ++
     }
     if (firstIt < first.size) {
         for (i in current..second.size) {
@@ -190,6 +190,5 @@ fun <T : Comparable<T>> mergeArrays(first: Array<T>, second: Array<T?>) {
             firstIt ++
         }
     }
-    return second
 }
 
