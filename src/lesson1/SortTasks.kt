@@ -2,6 +2,7 @@
 
 package lesson1
 
+
 /**
  * Сортировка времён
  *
@@ -185,7 +186,7 @@ fun <T : Comparable<T>> mergeArrays(first: Array<T>, second: Array<T?>) {
         current ++
     }
     if (firstIt < first.size) {
-        for (i in current..second.size) {
+        for (i in current until second.size) {
             second[i] = first[firstIt]
             firstIt ++
         }
