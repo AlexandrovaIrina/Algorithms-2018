@@ -111,11 +111,10 @@ fun longestCommonSubstring(first: String, second: String): String {
 fun calcPrimesNumber(limit: Int): Int {
     if (limit <= 1) return 0
     var ans = LinkedList<Int>()
-    val lastNum = sqrt(limit.toDouble()).toInt()
     for (i in 2..limit) {
         var simple = true
         var j = i + 1
-        while (simple && j <= lastNum) {
+        while (simple && j < limit) {
             if (i % j == 0) simple = false
             j++
         }
