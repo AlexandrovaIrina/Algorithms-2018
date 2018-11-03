@@ -113,8 +113,9 @@ fun calcPrimesNumber(limit: Int): Int {
     var ans = LinkedList<Int>()
     for (i in 2..limit) {
         var simple = true
-        var j = i + 1
-        while (simple && j < limit) {
+        var j = 2
+        val lastNum = sqrt(i.toDouble()).toInt() + 1
+        while (simple && j <= lastNum) {
             if (i % j == 0) simple = false
             j++
         }
