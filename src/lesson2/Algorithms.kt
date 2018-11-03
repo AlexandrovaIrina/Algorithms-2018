@@ -114,7 +114,7 @@ fun calcPrimesNumber(limit: Int): Int {
     for (i in 2..limit) {
         var simple = true
         var j = 2
-        val lastNum = sqrt(i.toDouble()).toInt() + 1
+        val lastNum = sqrt(i.toDouble()).toInt()
         while (simple && j <= lastNum) {
             if (i % j == 0) simple = false
             j++
