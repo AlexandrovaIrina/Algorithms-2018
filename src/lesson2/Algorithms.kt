@@ -95,7 +95,7 @@ fun josephTask(menNumber: Int, choiceInterval: Int): Int {
         i ++
         i %= menNumber
     }
-    return i
+    return i + 1
 }
 
 /**
