@@ -80,7 +80,7 @@ fun optimizeBuyAndSell(inputName: String): Pair<Int, Int> {
  * Х х Х
  */
 fun josephTask(menNumber: Int, choiceInterval: Int): Int {
-    var erase = MutableList(menNumber, {true})
+    val erase = MutableList(menNumber, {true})
     var i = 0
     var flag = 0
     while (flag < menNumber) {
@@ -95,7 +95,7 @@ fun josephTask(menNumber: Int, choiceInterval: Int): Int {
         i ++
         i %= menNumber
     }
-    return i + 1
+    return i
 }
 
 /**
