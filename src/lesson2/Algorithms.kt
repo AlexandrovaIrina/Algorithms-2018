@@ -2,6 +2,9 @@
 
 package lesson2
 
+import java.lang.Math.sqrt
+import java.util.*
+
 /**
  * Получение наибольшей прибыли (она же -- поиск максимального подмассива)
  * Простая
@@ -106,7 +109,19 @@ fun longestCommonSubstring(first: String, second: String): String {
  * Единица простым числом не считается.
  */
 fun calcPrimesNumber(limit: Int): Int {
-    TODO()
+    if (limit <= 1) return 0
+    var ans = LinkedList<Int>()
+    val lastNum = sqrt(limit.toDouble()).toInt() + 1
+    for (i in 2..limit) {
+        var simple = true
+        var j = i + 1
+        while (simple && j <= lastNum) {
+            if (i % j == 0) simple = false
+            j++
+        }
+        if (simple) ans.add(i)
+    }
+    return ans.size
 }
 
 /**
