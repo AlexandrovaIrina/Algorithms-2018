@@ -30,32 +30,8 @@ package lesson1
  * 19:56:14
  *
  * В случае обнаружения неверного формата файла бросить любое исключение.
- */
-/*private fun merge(times: List<Int>(3), which: Int, begin: Int, middle: Int, end: Int) {
-    val left = Arrays.copyOfRange(times[which], begin, middle)
-    val right = Arrays.copyOfRange(times[which], middle, end)
-    var li = 0
-    var ri = 0
-    for (i in begin until end) {
-        if (li < left.size && (ri == right.size || left[li] <= right[ri])) {
-            times[which][i] = left[li++]
-        } else {
-            times[which][i] = right[ri++]
-        }
-    }
-}
-private fun mrgSort (times: List<Int>(3), which: Int, begin: Int, end: Int) {
-    if (end - begin <= 1) return
-    val middle = (begin + end) / 2
-    mergeSort(times, which, begin, middle)
-    mergeSort(times, which, middle, end)
-    merge(times, which, begin, middle, end)
-}
-private fun fromStrToInt(time: String): List<Int>(3) {
-    val hhmmss = time.split(':')
-    val ans = hhmmss.forEach {it.toInt()}
-    return ans;
-}*/
+ **/
+
 fun sortTimes(inputName: String, outputName: String) { TODO()}
 
 
@@ -170,6 +146,11 @@ fun sortSequence(inputName: String, outputName: String) {
  *
  * Результат: second = [1 3 4 9 9 13 15 20 23 28]
  */
+
+/* Оценка алгоритма:
+ * время работы алгоритма - О(second.size)
+ * ресурсоемкость - О(1)
+*/
 fun <T : Comparable<T>> mergeArrays(first: Array<T>, second: Array<T?>) {
     var firstIt = 0
     var secondIt = first.size

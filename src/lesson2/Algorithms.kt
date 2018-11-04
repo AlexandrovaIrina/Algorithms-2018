@@ -79,6 +79,10 @@ fun optimizeBuyAndSell(inputName: String): Pair<Int, Int> {
  * Х   Х
  * Х х Х
  */
+/* Оцена алгоритма:
+* время работы - О(menNumber^2)
+* ресурсоемкость - О(menNumber)
+* */
 fun josephTask(menNumber: Int, choiceInterval: Int): Int {
     val erase = MutableList(menNumber, {true})
     var i = 0
@@ -127,6 +131,10 @@ fun longestCommonSubstring(first: String, second: String): String {
  * Справка: простым считается число, которое делится нацело только на 1 и на себя.
  * Единица простым числом не считается.
  */
+/* Оценка алгоритма:
+* время работы - О(limit*sqrt(limit))
+* ресурсоемкость - O(limit)
+* */
 fun calcPrimesNumber(limit: Int): Int {
     if (limit <= 1) return 0
     var ans = LinkedList<Int>()
