@@ -83,7 +83,7 @@ fun josephTask(menNumber: Int, choiceInterval: Int): Int {
     val erase = MutableList(menNumber, {true})
     var i = 0
     var flag = 0
-    while (flag < menNumber) {
+    while (flag <= menNumber) {
         var count = 1
         while (count != choiceInterval) {
             if (erase[i]) count++
