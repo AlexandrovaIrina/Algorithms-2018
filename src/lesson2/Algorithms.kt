@@ -85,7 +85,8 @@ fun josephTask(menNumber: Int, choiceInterval: Int): Int {
     var flag = 0
     while (flag <= menNumber) {
         var count = 1
-        while (count != choiceInterval) {
+        if (!erase[i]) count = 0
+        while (count <= choiceInterval) {
             if (erase[i]) count++
             i++
             i %= menNumber
