@@ -148,7 +148,7 @@ fun longestCommonSubstring(first: String, second: String): String {
             i++
         }
     }
-    while (i > 0 && j > 0 && list[i][j] != 0) {
+    while (i >= 0 && j >= 0 && list[i][j] != 0) {
         ans.insert(0, first[i])
         i--
         j--
