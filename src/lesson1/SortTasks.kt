@@ -149,7 +149,7 @@ fun sortSequence(inputName: String, outputName: String) {
 
 /* Оценка алгоритма:
  * время работы алгоритма - О(second.size)
- * ресурсоемкость - О(1)
+ * ресурсозатратность - О(1)
 */
 fun <T : Comparable<T>> mergeArrays(first: Array<T>, second: Array<T?>) {
     var firstIt = 0
