@@ -140,6 +140,7 @@ fun longestCommonSubstring(first: String, second: String): String {
     var i = 0
     var j = 0
     while (i < fstLen && list[i][j] != max) {
+        j = 0
         while (j < sndLen && list[i][j] != max) {
             j++
         }
