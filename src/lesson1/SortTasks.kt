@@ -2,6 +2,8 @@
 
 package lesson1
 
+import java.io.File
+
 
 /**
  * Сортировка времён
@@ -128,8 +130,35 @@ fun sortTemperatures(inputName: String, outputName: String) {
  * 2
  * 2
  */
+/* Оценка алгоритма:
+* время работы - О(n)
+* ресурсозатратность - О(n)*/
 fun sortSequence(inputName: String, outputName: String) {
-    TODO()
+    val input = File(inputName).readLines()
+    val nums = mutableMapOf<String, Int>()
+    var commonNum = ""
+    var count = 0
+    for (i in input) {
+        var last = nums[i] ?: 0
+        last ++
+        nums[i] = last
+        if (last > count || last == count && commonNum > i) {
+            count = last
+            commonNum = i
+        }
+    }
+    val writer = File(outputName).bufferedWriter()
+    for (i in input) {
+        if (i != commonNum) {
+            writer.write(i)
+            writer.newLine()
+        }
+    }
+    for (i in 0 until count) {
+        writer.write(commonNum)
+        writer.newLine()
+    }
+    writer.close()
 }
 
 /**

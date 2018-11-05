@@ -2,8 +2,6 @@
 
 package lesson2
 
-import java.io.File
-import java.lang.Math.scalb
 import java.lang.Math.sqrt
 import java.util.*
 
